@@ -1,0 +1,7 @@
+CREATE TABLE memberships (
+  id BIGINT(20) PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(150) NOT NULL,
+  cost BIGINT(20),
+  owner_id BIGINT(20) NOT NULL,
+  FOREIGN KEY (owner_id) REFERENCES people(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
